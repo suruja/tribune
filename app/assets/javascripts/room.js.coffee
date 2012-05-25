@@ -14,10 +14,10 @@ $ ->
     others = $("#{clock}[data-id='#{$(@).attr('data-id')}']")
     others.toggleClass 'highlighted'
     if isScrolledIntoView others
-      $(notification).show()
+      $(notification).hide()    
     else
-      $(notification).hide()
+      $(notification).show()
 
   $(clock).live 'click', ->
     texta = $(message_textarea)
-    texta.val "#{text.val()} #{$(@).attr('data-id')}"
+    texta.val "#{texta.val()} #{$(@).attr('data-id')}"
